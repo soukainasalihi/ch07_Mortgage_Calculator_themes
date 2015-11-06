@@ -1,0 +1,161 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#F5FFFA">
+
+
+    <!-- The bill amount -->
+
+    <TextView
+        style="@style/TextView.Label"
+        android:id="@+id/mortgageAmountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mortgage_amount_label" />
+
+    <EditText
+        style="@style/EditText"
+        android:id="@+id/mortgageAmountEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mortgageAmountLabel"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/mortgageAmountLabel"
+        android:ems="8"
+        android:inputType="numberDecimal"
+        android:text="@string/mortgage_amount" >
+
+    </EditText>
+    <requestFocus />
+
+    <!-- The tip percent -->
+    
+    <TextView
+        style="@style/TextView.Label"
+        android:id="@+id/percentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rate_percent_label"
+        android:layout_above="@+id/mortgageTermEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        style="@style/EditText"
+        android:id="@+id/percentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="@string/rate_percent"
+        android:layout_alignBottom="@+id/percentDownButton"
+        android:layout_toRightOf="@+id/totalLabel"
+        android:layout_toEndOf="@+id/totalLabel" />
+
+    <Button
+        style="@style/Button"
+        android:id="@+id/percentUpButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:text="@string/increase"
+        android:layout_alignTop="@+id/percentDownButton"
+        android:layout_alignRight="@+id/mortgageAmountEditText"
+        android:layout_alignEnd="@+id/mortgageAmountEditText" />
+
+
+    <Button
+        style="@style/Button"
+        android:id="@+id/percentDownButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:text="@string/decrease"
+        android:layout_marginTop="49dp"
+        android:layout_below="@+id/mortgageAmountLabel"
+        android:layout_toRightOf="@+id/percentTextView"
+        android:layout_toEndOf="@+id/percentTextView" />
+
+
+    <!-- the total -->
+    
+    <TextView
+        style="@style/TextView.Label"
+        android:id="@+id/totalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total_amount_label"
+        android:layout_marginTop="84dp"
+        android:layout_below="@+id/seekBar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        style="@style/TextView"
+        android:id="@+id/totalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:padding="5dp"
+        android:text="@string/total_amount"
+        android:layout_alignBottom="@+id/totalLabel"
+        android:layout_alignRight="@+id/yearsTextView"
+        android:layout_alignEnd="@+id/yearsTextView"
+        android:layout_toRightOf="@+id/mortgageTermLabel"
+        android:layout_toEndOf="@+id/mortgageTermLabel"
+        android:textAppearance="@style/EditText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mortgage_term_label"
+        android:id="@+id/mortgageTermLabel"
+        android:singleLine="true"
+        android:layout_alignBottom="@+id/mortgageTermEditText"
+        android:textIsSelectable="false"
+        style="@style/TextView.Label"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/mortgageAmountEditText"
+        android:layout_toLeftOf="@+id/mortgageAmountEditText" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_below="@+id/mortgageTermEditText"
+        android:layout_toLeftOf="@+id/percentUpButton"
+        android:layout_marginTop="40dp"
+        android:layout_alignLeft="@+id/percentTextView"
+        android:layout_alignStart="@+id/percentTextView" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/yearsTextView"
+        android:text="%"
+        android:layout_alignBottom="@+id/seekBar"
+        android:layout_alignRight="@+id/mortgageTermEditText"
+        android:layout_alignEnd="@+id/mortgageTermEditText"
+        android:layout_alignTop="@+id/seekBar"
+        android:layout_toRightOf="@+id/seekBar"
+        android:layout_toEndOf="@+id/seekBar"
+        style="@style/TextView"
+        android:textAppearance="@style/EditText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:id="@+id/mortgageTermEditText"
+        android:text="@string/mortgage_term"
+        style="@style/EditText"
+        android:layout_below="@+id/percentDownButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="38dp"
+        android:layout_toEndOf="@+id/mortgageAmountLabel"
+        android:layout_toRightOf="@+id/mortgageAmountLabel" />
+
+
+</RelativeLayout><!-- From: file:/C:/Users/Soukaina/Desktop/ch07_Mortgage_Calculator_themes/app/src/main/res/layout/activity_mortgage_calculator.xml -->
