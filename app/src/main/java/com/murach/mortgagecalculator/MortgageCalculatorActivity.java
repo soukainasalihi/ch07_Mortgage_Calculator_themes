@@ -4,7 +4,6 @@
 package com.murach.mortgagecalculator;
 
 import java.text.NumberFormat;
-
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -17,9 +16,9 @@ import android.widget.TextView.OnEditorActionListener;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-
 import com.murach.mortgagecalculator.R;
 
+// MortgageCalculator is an aplication that helps the user estimate the monthly mortgage payment
 public class MortgageCalculatorActivity extends Activity
 implements OnEditorActionListener, OnClickListener {
 
